@@ -1,0 +1,188 @@
+$swe-green: #05c46b;
+$primary-font: 'Montserrat', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+ul {
+    list-style: none;
+}
+
+body {
+    background: white;
+    font-family: $primary-font;
+}
+
+section.main-sec {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    img {
+        width: 30%;
+        height: 85vh;
+        position: absolute;
+        top: 25px;
+        left: 23%;
+        box-shadow: 10px 10px 55px rgba(0,0,0,0.3);
+    }
+
+
+    .left-sec {
+        height: 100%;
+        width: 35%;
+        float: left;
+        background: $swe-green;
+        color: #f3f3f3;
+
+        h1 {
+            margin: 40px 9%;
+            letter-spacing: 0.2em;
+            font-weight: 700;
+        }
+
+        .info-box {
+            margin-top: 400px;
+            margin-left: 9%;
+
+            .info {
+                margin-bottom: 10px;
+                font-weight: 700;
+                letter-spacing: 1.1px;
+            }
+
+            .normal {
+                margin-bottom: 15px;
+            }
+
+            .socials {
+                display: grid;
+                margin-top: 15px;
+                grid-template-columns: repeat(4, 1fr);
+                justify-items: start;
+                width: 50%;
+
+                .soc-icon {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        
+
+    }
+
+    .right-sec {
+        float: right;
+        position: relative;
+
+        .hamburger {
+            font-size: 2rem;
+            position: absolute;
+            top: 30px;
+            right: 5%;
+        }
+
+        .right-area {
+            width: 60%;
+            height: 320px;
+            margin-top: 220px;
+            margin-left: 24%;
+
+            h1 {
+                font-size:2rem;
+                text-transform: uppercase;
+                letter-spacing: 1.2px;
+                color: $swe-green;
+                margin-bottom: 20px;
+
+                span {
+                    display: block;
+                    color: #111;
+                }
+
+                
+            }
+
+            h3 {
+                letter-spacing: 1.3px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                margin-bottom: 50px;
+            }
+
+            .btn {
+                padding: 15px 45px;
+                border-radius: 100px;
+                letter-spacing: 1.2px;
+                font-size: 0.9rem;
+                position: relative;
+                background: inherit;
+            }
+
+            .port-btn::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 100px;
+                width: 100%;
+                height: 100%;
+                background: inherit;
+                z-index: -1;
+                transition: all 0.3s;
+
+            }
+
+            .port-btn:hover::after {
+                transform: scale(1.3);
+                border: 0;
+            }
+
+            .port-btn {
+                background: $swe-green;
+                margin-right: 20%;
+                color: #f3f3f3;
+            }
+
+            .resume-btn {
+                border: 2px solid #333;
+                background: #f4f4f4;
+                transition: all 0.3s;
+            }
+
+            .resume-btn:hover {
+                background: #333;
+                color: #f4f4f4;
+            }
+
+            // .resume-btn::after {
+            //     content: "";
+            //     position: absolute;
+            //     top: 0;
+            //     left: 0;
+            //     border-radius: 100px;
+            //     width: 100%;
+            //     height: 100%;
+            //     background: inherit;
+            //     z-index: -1;
+            //     transition: all 0.3s ease-out;
+            // }
+
+            // .resume-btn:hover::after {
+            //     transform: scale(1.3);
+            //     border: 2px solid #000;
+            // }
+        }
+    }
+}
